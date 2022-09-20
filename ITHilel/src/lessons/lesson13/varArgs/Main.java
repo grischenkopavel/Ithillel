@@ -1,6 +1,6 @@
 package lessons.lesson13.varArgs;
 
-public class Main {
+class Main {
 
     public static void main(String[] args) {
         int count = addAll(1, 1, 1);
