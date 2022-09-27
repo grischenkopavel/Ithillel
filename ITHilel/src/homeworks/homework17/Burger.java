@@ -9,7 +9,7 @@ public class Burger {
     public static void main(String[] args) {
         LinkedList<String> burger = new LinkedList<>();
         burger.add(burgerChoice());
-        while (burgerMoreIngredients()) {
+        while (burgerNeedMoreIngredients()) {
             burger.add(burgerChoice());
         }
         printBurger(burger);
@@ -21,7 +21,7 @@ public class Burger {
         return scanner.nextLine();
     }
 
-    static boolean burgerMoreIngredients() {
+    static boolean burgerNeedMoreIngredients() {
         System.out.println("Do you want additional ingredients? Select 'Y' or 'N'");
         Scanner scanner = new Scanner(System.in);
         String wantToProceed = scanner.nextLine();
@@ -63,7 +63,7 @@ public class Burger {
                     burgerCost += 30;
                     break;
                 default:
-                    System.out.println("Something i wrong");
+                    System.out.println("Something is wrong");
             }
         }
         return burgerCost;
